@@ -3,8 +3,8 @@ MAINTAINER Georg Hoch <ghoch+omnigollum-alpine@mailbox.org>
 
 # The default mirror (dl-cdn.alpinelinux.org) has issues sometimes for me
 # More mirrors available here: mirrors.alpinelinux.org
-RUN echo "https://mirror.csclub.uwaterloo.ca/alpine/v3.9/main" >/etc/apk/repositories && \
-    echo "https://mirror.csclub.uwaterloo.ca/alpine/v3.9/community" >>/etc/apk/repositories
+RUN echo "https://dl-4.alpinelinux.org/alpine/v3.9/main" >/etc/apk/repositories && \
+    echo "https://dl-4.alpinelinux.org/alpine/v3.9/community" >>/etc/apk/repositories
 RUN apk update
 RUN apk add --no-cache --virtual build-deps build-base
 RUN apk add --no-cache icu-dev icu-libs
