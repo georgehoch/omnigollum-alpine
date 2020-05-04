@@ -10,6 +10,7 @@ RUN apk add --no-cache --virtual build-deps build-base
 RUN apk add --no-cache icu-dev icu-libs
 RUN apk add --no-cache cmake
 RUN apk add --no-cache git
+RUN apk add --no-cache openssl
 
 RUN gem install redcarpet github-markdown
 RUN gem install omniauth-github github-markup
