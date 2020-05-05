@@ -19,7 +19,7 @@ RUN gem install github-markdown
 RUN gem install gollum
 RUN gem install omnigollum
 
-RUN apk del cmake build-base build-deps icu-dev
+RUN apk del cmake build-base build-deps icu-dev openssl-dev
 
 # create a volume and
 WORKDIR /wiki
