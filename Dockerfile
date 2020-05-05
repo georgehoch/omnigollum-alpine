@@ -23,6 +23,7 @@ RUN apk del cmake build-base build-deps icu-dev
 
 # create a volume and
 WORKDIR /wiki
+VOLUME /usr/local/etc/gollum
 
 ENTRYPOINT ["/bin/sh", "-c", "git init && gollum --port 8080 --live-preview"]
 EXPOSE 8080
