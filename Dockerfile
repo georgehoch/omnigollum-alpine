@@ -25,5 +25,5 @@ RUN apk del cmake build-base build-deps icu-dev openssl-dev
 WORKDIR /wiki
 VOLUME /usr/local/etc/gollum
 
-ENTRYPOINT ["/bin/sh -c git init && gollum --config "/usr/local/etc/gollum/config.rb --base-dir "/wiki"" --port 8080 --live-preview"]
+ENTRYPOINT ["/bin/sh -c cd /wiki && git init && gollum --config "/usr/local/etc/gollum/config.rb --base-dir "/wiki"" --port 8080 --live-preview"]
 EXPOSE 8080
